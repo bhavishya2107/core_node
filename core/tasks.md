@@ -1,17 +1,34 @@
 1. Explain Node and V8 in your own words ? 
 // Answer here...
+Node is a runtime environment which runs javascript in the server side and makes servers, server side apps.
+Node is a compilation of libraries such as V8 engine, LibUV, OpenSSL, Zlib etc...
+
+V8 is a engine which compiles JS into the code which is understood by the browser
+V8 has a callStack which comprises of events to execute if it is async task it is forward to event queue.
+V8 is javascript engine written in C++, it is used in chrome and node.js
 
 2. Explain steps in REPL(here) and command to start REPL ?
 // Answer here...
+1.Go to the terminal if in vscode press control + j it opens up the terminal.
+2.type 'node' and enter the REPL
+3.Now you can execute javascript code into it.
 
-3. Run `index.js` in the same directory as script writer using `node FILE_NAME.js` and output result of console here.
+3. Run `index.js` in the same directory as script writer using `node FILE_NAME.js` and output result of console here. //done
 
-4. Require fs module and read `theory.md` using fs.readFile method in index.js file.
+4. Require fs module and read `theory.md` using fs.readFile method in index.js file. //done
 
 5. Explain Buffer and different methods to create a buffer ?
+Buffer is used to store data it displays the data in the form of hexadecimal
+to create a new buffer we need to assign a variable like below,
+
+var buf = new Buffer(20) //it is a buffer with a size of 20
+buf('string') //it converts the string into a buffer
+
 
 6. What is blocking code ? How is it different from non-blocking/async codes ? Correct blocking code in index.js to run asynchronously ?
 // Answer here ...
+Blocking code refers to sync code which will block the process of execution.
+As nodejs works on v8 engine it has only a single thread which runs the code one by one hence if the code is synchronous it blocks until the particular task is finished in the callStack it does not skip or has other threads to process the task.
 
 7. Request from browser `https://altcampus.io` and copy request, response and general headers into answer.js.
 
